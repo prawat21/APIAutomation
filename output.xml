@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220917 20:27:02.141" rpa="false" schemaversion="3">
+<suite id="s1" name="TC1 GET Requests" source="C:\Users\prawat\PycharmProjects\APIAutomation\TestCases\TC1_GET_Requests.robot">
+<test id="s1-t1" name="Get_circuitsInfo" line="12">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220917 20:27:02.427" level="INFO">Creating Session using : alias=mysession, url=http://ergast.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220917 20:27:02.426" endtime="20220917 20:27:02.427"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>api/f1/${season}/circuits.json</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220917 20:27:02.809" level="INFO">GET Request : url=http://ergast.com/api/f1/2008/circuits.json 
+ path_url=/api/f1/2008/circuits.json 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220917 20:27:02.809" level="INFO">GET Response : url=http://ergast.com/api/f1/2008/circuits.json 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 17 Sep 2022 14:57:02 GMT', 'Server': 'Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16', 'X-Powered-By': 'PHP/5.4.16', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=300', 'Content-Length': '4142', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json; charset=utf-8'} 
+ body={"MRData":{"xmlns":"http:\/\/ergast.com\/mrd\/1.5","series":"f1","url":"http://ergast.com/api/f1/2008/circuits.json","limit":"30","offset":"0","total":"18","CircuitTable":{"season":"2008","Circuits":[{"circuitId":"albert_park","url":"http:\/\/en.wikipedia.org\/wiki\/Melbourne_Grand_Prix_Circuit","circuitName":"Albert Park Grand Prix Circuit","Location":{"lat":"-37.8497","long":"144.968","locality":"Melbourne","country":"Australia"}},{"circuitId":"bahrain","url":"http:\/\/en.wikipedia.org\/wiki\/Bahrain_International_Circuit","circuitName":"Bahrain International Circuit","Location":{"lat":"26.0325","long":"50.5106","locality":"Sakhir","country":"Bahrain"}},{"circuitId":"catalunya","url":"http:\/\/en.wikipedia.org\/wiki\/Circuit_de_Barcelona-Catalunya","circuitName":"Circuit de Barcelona-Catalunya","Location":{"lat":"41.57","long":"2.26111","locality":"Montmeló","country":"Spain"}},{"circuitId":"fuji","url":"http:\/\/en.wikipedia.org\/wiki\/Fuji_Speedway","circuitName":"Fuji Speedway","Location":{"lat":"35.3717","long":"138.927","locality":"Oyama","country":"Japan"}},{"circuitId":"hockenheimring","url":"http:\/\/en.wikipedia.org\/wiki\/Hockenheimring","circuitName":"Hockenheimring","Location":{"lat":"49.3278","long":"8.56583","locality":"Hockenheim","country":"Germany"}},{"circuitId":"hungaroring","url":"http:\/\/en.wikipedia.org\/wiki\/Hungaroring","circuitName":"Hungaroring","Location":{"lat":"47.5789","long":"19.2486","locality":"Budapest","country":"Hungary"}},{"circuitId":"interlagos","url":"http:\/\/en.wikipedia.org\/wiki\/Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace","circuitName":"Autódromo José Carlos Pace","Location":{"lat":"-23.7036","long":"-46.6997","locality":"São Paulo","country":"Brazil"}},{"circuitId":"istanbul","url":"http:\/\/en.wikipedia.org\/wiki\/Istanbul_Park","circuitName":"Istanbul Park","Location":{"lat":"40.9517","long":"29.405","locality":"Istanbul","country":"Turkey"}},{"circuitId":"magny_cours","url":"http:\/\/en.wikipedia.org\/wiki\/Circuit_de_Nevers_Magny-Cours","circuitName":"Circuit de Nevers Magny-Cours","Location":{"lat":"46.8642","long":"3.16361","locality":"Magny Cours","country":"France"}},{"circuitId":"marina_bay","url":"http:\/\/en.wikipedia.org\/wiki\/Marina_Bay_Street_Circuit","circuitName":"Marina Bay Street Circuit","Location":{"lat":"1.2914","long":"103.864","locality":"Marina Bay","country":"Singapore"}},{"circuitId":"monaco","url":"http:\/\/en.wikipedia.org\/wiki\/Circuit_de_Monaco","circuitName":"Circuit de Monaco","Location":{"lat":"43.7347","long":"7.42056","locality":"Monte-Carlo","country":"Monaco"}},{"circuitId":"monza","url":"http:\/\/en.wikipedia.org\/wiki\/Autodromo_Nazionale_Monza","circuitName":"Autodromo Nazionale di Monza","Location":{"lat":"45.6156","long":"9.28111","locality":"Monza","country":"Italy"}},{"circuitId":"sepang","url":"http:\/\/en.wikipedia.org\/wiki\/Sepang_International_Circuit","circuitName":"Sepang International Circuit","Location":{"lat":"2.76083","long":"101.738","locality":"Kuala Lumpur","country":"Malaysia"}},{"circuitId":"shanghai","url":"http:\/\/en.wikipedia.org\/wiki\/Shanghai_International_Circuit","circuitName":"Shanghai International Circuit","Location":{"lat":"31.3389","long":"121.22","locality":"Shanghai","country":"China"}},{"circuitId":"silverstone","url":"http:\/\/en.wikipedia.org\/wiki\/Silverstone_Circuit","circuitName":"Silverstone Circuit","Location":{"lat":"52.0786","long":"-1.01694","locality":"Silverstone","country":"UK"}},{"circuitId":"spa","url":"http:\/\/en.wikipedia.org\/wiki\/Circuit_de_Spa-Francorchamps","circuitName":"Circuit de Spa-Francorchamps","Location":{"lat":"50.4372","long":"5.97139","locality":"Spa","country":"Belgium"}},{"circuitId":"valencia","url":"http:\/\/en.wikipedia.org\/wiki\/Valencia_Street_Circuit","circuitName":"Valencia Street Circuit","Location":{"lat":"39.4589","long":"-0.331667","locality":"Valencia","country":"Spain"}},{"circuitId":"villeneuve","url":"http:\/\/en.wikipedia.org\/wiki\/Circuit_Gilles_Villeneuve","circuitName":"Circuit Gilles Villeneuve","Location":{"lat":"45.5","long":"-73.5228","locality":"Montreal","country":"Canada"}}]}}} 
+ </msg>
+<msg timestamp="20220917 20:27:02.809" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220917 20:27:02.428" endtime="20220917 20:27:02.809"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220917 20:27:02.812" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20220917 20:27:02.810" endtime="20220917 20:27:02.812"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220917 20:27:02.813" endtime="20220917 20:27:02.813"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${body}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220917 20:27:02.817" level="INFO">${body} = {"MRData":{"xmlns":"http:\/\/ergast.com\/mrd\/1.5","series":"f1","url":"http://ergast.com/api/f1/2008/circuits.json","limit":"30","offset":"0","total":"18","CircuitTable":{"season":"2008","Circuits":[...</msg>
+<status status="PASS" starttime="20220917 20:27:02.815" endtime="20220917 20:27:02.817"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${body}</arg>
+<arg>Japan</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220917 20:27:02.818" endtime="20220917 20:27:02.818"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${contentTypeValue}</var>
+<arg>${response.headers}</arg>
+<arg>Content-Type</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220917 20:27:02.822" level="INFO">${contentTypeValue} = application/json; charset=utf-8</msg>
+<status status="PASS" starttime="20220917 20:27:02.819" endtime="20220917 20:27:02.822"/>
+</kw>
+<status status="PASS" starttime="20220917 20:27:02.426" endtime="20220917 20:27:02.823"/>
+</test>
+<status status="PASS" starttime="20220917 20:27:02.145" endtime="20220917 20:27:02.826"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC1 GET Requests">TC1 GET Requests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
